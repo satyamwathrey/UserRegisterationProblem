@@ -11,7 +11,6 @@ namespace UserRegisterationProblem
     {
         static void Main(string[] args)
         {
-
             //Welcome Message
             Console.WriteLine("----------------------------------------------------------------------");
             Console.WriteLine("=-=-=-=-=-=-=-=Welcome To the User Registration Problem=-=-=-=-=-=-=-=");
@@ -53,6 +52,15 @@ namespace UserRegisterationProblem
             string password = Console.ReadLine();
             bool passwordResult = validate.ValidatePassword(password);
             validate.PrintResult(passwordResult);
+
+            Console.WriteLine("--------------------------------------");
+
+            Console.WriteLine("Checking for sample mails : ");
+            foreach (string mail in validate.GetList())
+            {
+                Console.Write(mail + " : ");
+                validate.PrintResult(validate.ValidateEmail2(mail));
+            }
 
             Console.WriteLine("--------------------------------------");
 
