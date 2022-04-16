@@ -34,6 +34,13 @@ namespace UserRegisterationProblem
 
             Console.WriteLine("--------------------------------------");
 
+            Console.WriteLine("Enter Email Id : ");
+            string email = Console.ReadLine();
+            bool emailResult = validate.ValidateEmail(email);
+            validate.PrintResult(emailResult);
+
+            Console.WriteLine("--------------------------------------");
+
             Console.ReadLine();
         }
     }
