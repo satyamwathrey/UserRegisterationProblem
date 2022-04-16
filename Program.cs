@@ -10,7 +10,8 @@ namespace UserRegisterationProblem
     internal class Program
     {
         static void Main(string[] args)
-        { //Welcome Message
+        {
+            //Welcome Message
             Console.WriteLine("----------------------------------------------------------------------");
             Console.WriteLine("=-=-=-=-=-=-=-=Welcome To the User Registration Problem=-=-=-=-=-=-=-=");
             Console.WriteLine("----------------------------------------------------------------------");
@@ -44,6 +45,13 @@ namespace UserRegisterationProblem
             string mobNumber = Console.ReadLine();
             bool mobNumberResult = validate.ValidateMobileNumber(mobNumber);
             validate.PrintResult(mobNumberResult);
+
+            Console.WriteLine("--------------------------------------");
+
+            Console.WriteLine("Enter Password : ");
+            string password = Console.ReadLine();
+            bool passwordResult = validate.ValidatePassword(password);
+            validate.PrintResult(passwordResult);
 
             Console.WriteLine("--------------------------------------");
 
