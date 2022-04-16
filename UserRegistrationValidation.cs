@@ -9,13 +9,13 @@ namespace UserRegisterationProblem
 {
     class UserRegistrationValidation
     {
-
         private static string REGEX_FIRSTNAME = "^[A-Z][a-z]{2,}$";
         private static string REGEX_LASTNAME = "^[A-Z][a-z]{2,}$";
         private static string REGEX_EMAIL = "^[a-zA-Z0-9]+([.][A-Za-z0-9]+)*[@][a-zA-Z0-9]+[.][a-zA-Z]+([.][a-zA-Z]+)?$";
         private static string REGEX_MOBILENUMBER = "^[1-9]{1,3}[ ][1-9][0-9]{9}$";
         //private static string REGEX_PASSWORD = "^[a-zA-Z0-9-+_!@#$%^&*.,?]{8,}$"; //Rule 1 minimum 8 characters
-        private static string REGEX_PASSWORD = "^(?=.*[A-Z])[A-Za-z0-9!@#$%^&*]{8,}$"; //Rule 2 should have at least 1 Upper Case
+        //private static string REGEX_PASSWORD = "^(?=.*[A-Z])[A-Za-z0-9!@#$%^&*]{8,}$"; //Rule 2 should have at least 1 Upper Case
+        private static string REGEX_PASSWORD = "^(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9-+_!@#$%^&*.,?]{8,}$"; //Rule 3 Should have at least 1 numeric number in the password
 
         //Method to test first name
         public bool ValidateFirstName(string firstName)
