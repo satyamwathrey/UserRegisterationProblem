@@ -36,37 +36,79 @@ namespace UserRegistrationProblem
         //Method to test first name
         public bool ValidateFirstName(string firstName)
         {
-            return Regex.IsMatch(firstName, REGEX_FIRSTNAME);
+            if (Regex.IsMatch(firstName, REGEX_FIRSTNAME))
+            {
+                return true;
+            }
+            else
+            {
+                throw new InvalidUserDetailException(InvalidUserDetailException.ExceptionType.INVALID_FIRST_NAME, "Invalid first name.");
+            }
         }
 
         //Method to test last name
         public bool ValidateLastName(string lastName)
         {
-            return Regex.IsMatch(lastName, REGEX_LASTNAME);
+            if (Regex.IsMatch(lastName, REGEX_LASTNAME))
+            {
+                return true;
+            }
+            else
+            {
+                throw new InvalidUserDetailException(InvalidUserDetailException.ExceptionType.INVALID_LAST_NAME, "Invalid last name.");
+            }
         }
 
         //Method to test Email ID
         public bool ValidateEmail(string email)
         {
-            return Regex.IsMatch(email, REGEX_EMAIL);
+            if (Regex.IsMatch(email, REGEX_EMAIL))
+            {
+                return true;
+            }
+            else
+            {
+                throw new InvalidUserDetailException(InvalidUserDetailException.ExceptionType.INVALID_EMAIL, "Invalid email id.");
+            }
         }
 
         //Method to test Mobile Number
         public bool ValidateMobileNumber(string mobNumber)
         {
-            return Regex.IsMatch(mobNumber, REGEX_MOBILENUMBER);
+            if (Regex.IsMatch(mobNumber, REGEX_MOBILENUMBER))
+            {
+                return true;
+            }
+            else
+            {
+                throw new InvalidUserDetailException(InvalidUserDetailException.ExceptionType.INVALID_MOBILE_NUMBER, "Invalid mobile number.");
+            }
         }
 
         //Method to test Password
         public bool ValidatePassword(string password)
         {
-            return Regex.IsMatch(password, REGEX_PASSWORD);
+            if (Regex.IsMatch(password, REGEX_PASSWORD))
+            {
+                return true;
+            }
+            else
+            {
+                throw new InvalidUserDetailException(InvalidUserDetailException.ExceptionType.INVALID_PASSWORD, "Invalid password.");
+            }
         }
 
         //Method to test sample emails
         public bool ValidateEmail2(string email)
         {
-            return Regex.IsMatch(email, REGEX_EMAIL2);
+            if (Regex.IsMatch(email, REGEX_EMAIL2))
+            {
+                return true;
+            }
+            else
+            {
+                throw new InvalidUserDetailException(InvalidUserDetailException.ExceptionType.INVALID_EMAIL, "Invalid email id.");
+            }
         }
 
         //To print the result
