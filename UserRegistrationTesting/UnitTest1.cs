@@ -14,7 +14,7 @@ namespace UserRegistrationTesting
         {
             //Arrange
             UserRegistrationValidation user = new UserRegistrationValidation();
-            string firstName = "Satyam";
+            string firstName = "Akshay";
             //Act
             bool result = user.ValidateFirstName(firstName);
             //Assert
@@ -25,7 +25,7 @@ namespace UserRegistrationTesting
         {
             //Arrange
             UserRegistrationValidation user = new UserRegistrationValidation();
-            string lastName = "Wathrey";
+            string lastName = "Sayre";
             //Act
             bool result = user.ValidateFirstName(lastName);
             //Assert
@@ -36,7 +36,7 @@ namespace UserRegistrationTesting
         {
             //Arrange
             UserRegistrationValidation user = new UserRegistrationValidation();
-            string email = "swathrey1@gmail.com";
+            string email = "akshaysayre7@gmail.com";
             //Act
             bool result = user.ValidateEmail(email);
             //Assert
@@ -47,7 +47,7 @@ namespace UserRegistrationTesting
         {
             //Arrange
             UserRegistrationValidation user = new UserRegistrationValidation();
-            string mobileNumber = "91 9575938008";
+            string mobileNumber = "91 7999837990";
             //Act
             bool result = user.ValidateMobileNumber(mobileNumber);
             //Assert
@@ -58,69 +58,12 @@ namespace UserRegistrationTesting
         {
             //Arrange
             UserRegistrationValidation user = new UserRegistrationValidation();
-            string password = "satyam@123";
+            string password = "Akshay@123";
             //Act
             bool result = user.ValidatePassword(password);
             //Assert
             Assert.IsTrue(result);
         }
-        //Sad Test Cases(Test Cases Fail The Entry)
-        [TestMethod]
-        public void GivenUserFistName_WhenValidate_ShouldReturnFalse()
-        {
-            //Arrange
-            UserRegistrationValidation user = new UserRegistrationValidation();
-            string firstName = "satyam";
-            //Act
-            bool result = user.ValidateFirstName(firstName);
-            //Assert
-            Assert.IsFalse(result);
-        }
-        [TestMethod]
-        public void GivenUserLastName_WhenValidate_ShouldReturnFalse()
-        {
-            //Arrange
-            UserRegistrationValidation user = new UserRegistrationValidation();
-            string lastName = "wathrey";
-            //Act
-            bool result = user.ValidateFirstName(lastName);
-            //Assert
-            Assert.IsFalse(result);
-        }
-        [TestMethod]
-        public void GivenEmailId_WhenValidate_ShouldReturnFalse()
-        {
-            //Arrange
-            UserRegistrationValidation user = new UserRegistrationValidation();
-            string email = "satyamwathreygmail.com";
-            //Act
-            bool result = user.ValidateEmail(email);
-            //Assert
-            Assert.IsFalse(result);
-        }
-        [TestMethod]
-        public void GivenMobileNumber_WhenValidate_ShouldReturnFalse()
-        {
-            //Arrange
-            UserRegistrationValidation user = new UserRegistrationValidation();
-            string mobileNumber = "91 95876006";
-            //Act
-            bool result = user.ValidateMobileNumber(mobileNumber);
-            //Assert
-            Assert.IsFalse(result);
-        }
-        [TestMethod]
-        public void GivenPassword_WhenValidate_ShouldReturnFalse()
-        {
-            //Arrange
-            UserRegistrationValidation user = new UserRegistrationValidation();
-            string password = "satyam@#123";
-            //Act
-            bool result = user.ValidatePassword(password);
-            //Assert
-            Assert.IsFalse(result);
-        }
-        //Uc-11 Validate Multiple Emails
         [TestMethod]
         [DataRow("abc@yahoo.com")]
         [DataRow("abc-100@yahoo.com")]
